@@ -106,7 +106,6 @@ $(document).ready(function () {
         burger.burger_name,
         "</span>",
         "<input type='text' class='edit'>",
-        // "<button class='delete btn btn-danger'>x</button>",
         "<button class='complete btn btn-primary'>Devour</button>",
         "</li>"
       ].join("")
@@ -114,9 +113,8 @@ $(document).ready(function () {
 
     if (burger.devoured) {
       $newInputRow.find("button").hide();
-    } else {
-      $newInputRow.find("button.delete").data("id", burger.id);
-    }
+    } 
+
     $newInputRow.find("input.edit").css("display", "none");
     $newInputRow.data("burger", burger);
     return $newInputRow;
